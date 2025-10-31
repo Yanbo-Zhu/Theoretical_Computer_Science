@@ -290,6 +290,10 @@ Ein 5-Tupel E=(Q,Σ,δ,q0,F) heißt **deterministischer endlicher Automat** (DEA
 （稍后将引入**非确定性（Nichtdeterminismus）**的概念。）
 
 
+ zusstand muss deterministische sein
+- In jede Zustand ist die richtung eindeutig, 不能通过 a 从 0 到 1, 或者从0 通过a 也到2 ，
+- Zustande ist eindeutig
+
 ## 3.3 状态转移表（Überführungstabelle）
 
 **状态转移函数 δ（Überführungsfunktion δ）**定义了自动机的“程序”——  
@@ -381,4 +385,167 @@ L={w∣E akzeptiert w},记作 L(E)=L.L = \{ w \mid E \text{ akzeptiert } w \}
 
 ![](image/Pasted%20image%2020251031154814.png)
 
+
+Gern — ich fasse das Ganze knapp, klar und strukturiert zusammen und gebe die Idee des Beweises per Induktion dazu.
+
+### 4.1.1 Was ist gegeben?
+
+Ein deterministischer endlicher Automat EEE (mit Zuständen {0,1,2}\{0,1,2\}{0,1,2}, Startzustand 000 und Endzustand(en) F={0}F=\{0\}F={0}).  
+Eingabealphabet Σ={a,b}\Sigma=\{a,b\}Σ={a,b}.
+
+![[Pasted image 20251031220434.png]]
+
+### 4.1.2 Ablauf der Berechnung (Lesekopf / Takt-Notation)
+
+![[Pasted image 20251031220503.png]]
+
+
+
+### 4.1.3 Erkannte Sprache  L(E)
+
+![[Pasted image 20251031220552.png]]
+
+
+### 4.1.4 Wie beweist man das formal
+
+![[Pasted image 20251031220609.png]]
+
+
+## 4.2 Alphabet eines DEAs
+
+
+Wie in Abschnitt [Zusammenhang mit Programmiersprachenmerwähnt](https://vfhti.eduloop.de/loop/Zusammenhang_mit_Programmiersprachen "Zusammenhang mit Programmiersprachen") lassen sich die elementaren Einheiten eines Programms durch das Modell eines endlichen Automaten analysieren und erkennen. Das folgende Beispiel zeigt den Ansatz für den Aufbau eines lexikalischen Analysators (Scanners). Das Beispiel wird dann im nächsten Abschnitt fortgeführt.
+
+![[Pasted image 20251031220708.png]]
+
+
+Sei das zugrunde liegende Alphabet
+Σ={a,b,…,z,0,1,…,9}
+
+1. Ein Identifikator bzw. Bezeichner besteht aus einem Wort w, beginnend mit einem Buchstaben und gefolgt von keinem oder endlich vielen Buchstaben oder Ziffern: w∈{a,b,…,z}{a,b,…,z,0,1,…,9}∗ , Der Einfachheit halber sei auf Großbuchstaben verzichtet. Ein endlicher Automat EI, der Identifikatoren akzeptiert, ist in Abbildung [Endlicher Automat EI](https://vfhti.eduloop.de/loop/Deterministische_Endliche_Automaten#fig_EA-ZGraph3aa) dargestellt. EI akzeptiert aber auch die reservierten Wörter als Identifikatoren.
+2. Ganze Zahlen ohne Vorzeichen bestehen aus einem Wort w aus endlich vielen Ziffern: w∈{0,1,2,…,9}+ Ein endlicher Automat EZ, der solche Zahlen akzeptiert, ist in Abbildung [Endlicher Automat EZ](https://vfhti.eduloop.de/loop/Deterministische_Endliche_Automaten#fig_EA-ZGraph3bb) dargestellt. 
+3. as reservierte Wort bzw. Schlüsselwort for besteht aus der Konkatenation der Zeichen f⋅o⋅r.  Ein endlicher Automat Efor, der dieses Wort akzeptiert, ist in Abbildung [Endlicher Automat Efor](https://vfhti.eduloop.de/loop/Deterministische_Endliche_Automaten#fig_EA-ZGraph3cc) dargestellt.
+
+
+In den folgenden Abbildungen zu diesem Beispiel gelten die nachstehenden abkürzenden Schreibweisen:
+buchstabe∈{a,b,c,…,z}
+ziffer∈{0,1,2,…,9} xf∈Σ∖{f} xo∈Σ∖{o} xr∈Σ∖{r}
+
+![[Pasted image 20251031220902.png]]
+
+
+![[Pasted image 20251031220909.png]]
+
+
+![[Pasted image 20251031220916.png]]
+
+
+
+# 5 2025-10-24 在线课程
+
+
+
+
+## 5.1 我们想要建立一个Tomaten zu der Sprache
+
+Aphabet {0, 1}
+
+Spache ist aller Worter mit w,   w ist das leere Wort,oder enthalt nur 一些列的 Nullen 值
+
+
+![[Pasted image 20251031221127.png]]
+
+
+q0 -> q0 für eingabe eps, 0; q0 -> q1 füe eingabe 1: endzustand q0
+
+Epsilon und 0
+
+ist eine beliebig gewählte Sprache
+
+ Wir haben gesagt,  die Menge aller Wörter die der Automat erkennt, ist es eine Sprache und hier sage ich hier ist deine Sprache. 
+
+所以说
+
+
+
+## 5.2 Definieren wir ein Automaten
+
+
+Einen greade Anzahle von null und eine gerade Anzahl von eins
+
+![[Pasted image 20251031221146.png]]
+
+
+就是说 产生的zustande 连起来， 只能 得到 一连串的 奇数个0以及奇数个1
+
+===
+
+按照他的要求 ， 我们得到下面的设计
+
+Q0 是开始的点
+
+===
+
+下面是不对的， 因为很有可能 只包含1 或这个 0，  我们的要求必须 得到 一连串的 奇数个0以及奇数个1
+
+![[Pasted image 20251031221157.png]]
+
+![[Pasted image 20251031221202.png]]
+
+![[Pasted image 20251031221205.png]]
+
+
+## 5.3 鉴别 problematische Automaten
+
+
+eine Automate  ist falsch. wenn entweder dann wenn er ein Wort seiner Sprache nicht erkennen
+ Oder wenn er ein Wort erkennen(erzeugen), was nicht zu seiner Sprache gehört .
+
+
+----
+
+
+![[Pasted image 20251031221243.png]]
+
+
+Problem是从q0, 用 wort 1, 可以到 q1 或者到 q0,  这不符合 automate 的要求
+双圈代表 endpoint
+
+---
+
+![[Pasted image 20251031221255.png]]
+
+
+Welche sprache  kann er sprechen:
+
+Alle Woeter, Der vorletzten Zeichen ist 1 muss
+
+alle die mit 1 an dritter stelle von hinten haben
+
+他说不出 000
+
+Automaten ist nciht einduetig , 因为q0 说1，可以到 q1 或者到q0
+
+---
+
+![[Pasted image 20251031221304.png]]
+
+
+E 是 epsilon
+
+Welche Woeter erkannt das Automaten :
+
+Automaten  erkennt alle Woerter
+
+bzw. a^x, b^x, c^x
+
+X ist ein belibeige Zahnl von 0 bis unendlich
+
+Automaten kann die Worter sprachen, die Belibige zahl von A, dann gefolgt von Belibigen Anzahl vonb, dann  gefolgt von Belibigen Anzahl von c , bestehen
+
+Die alle nWortter, die a, b,c folgen, 不能再说b了， 如果已经到b 了. 不能再说ab, 了， 如果 到了c. 
+
+Er kommt von b nicht zu a
+
+Die Reihenfolge ist wichtig, weil von b kann man nicht auf a zurück
 
