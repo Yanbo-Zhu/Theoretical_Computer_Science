@@ -27,6 +27,21 @@ Der Durchschnitt zweier Mengen A und B (Zeichen: A∩B) ist die Menge aller Elem
 6 Vereinigung
 Die Vereinigung zweier Mengen A und B (Zeichen: A ∪ B) ist die Menge aller Elemente, die entweder in A oder (nicht ausschliessendes) in B enthalten sind
 
+
+6 .1 setminus Menge 
+L1∖L2  L₁ \setminus L₂
+读作：**„L₁ ohne L₂“**（德语）  
+或  
+**“L₁ minus L₂”**（英语）
+
+意思是：
+
+> **属于 L₁ 但不属于 L₂ 的所有元素的集合**
+
+
+![[Pasted image 20251101084527.png]]
+
+
 7 Potenzmenge
 Eine Menge kann selber wieder aus Mengen bestehen.
 **Die Menge aller Teilmengen einer Grundmenge nennt man Potenzmenge.**

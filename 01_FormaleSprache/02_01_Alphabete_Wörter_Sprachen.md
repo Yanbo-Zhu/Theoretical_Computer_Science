@@ -25,6 +25,8 @@ Zeichen haben die Länge 1.
 ![](image/Pasted%20image%2020251031132119.png)
 
 
+
+
 # 2 Wort w
 
 Ein **Wort** über einem Alphabet ist eine endliche Zeichenfolge, die aus keinem oder endlich vielen Zeichen des Alphabets zusammengesetzt ist. Die Zeichen werden unmittelbar hintereinander geschrieben.
@@ -44,10 +46,10 @@ Beispiel
 ![](image/Pasted%20image%2020251031135216.png)
 
 
-## 2.1 ϵ
+## 2.1 leeres Wort ϵ  Epsilon
 
 **leeres Wort** und wird mit  ϵ
-
+ leere Sprache ∅
 ## 2.2 **Länge eines Wortes** | w | 
 Die **Länge eines Wortes** w über einem Alphabet ist die Anzahl seiner Zeichen, geschrieben ∣w∣.
 
@@ -60,7 +62,7 @@ Die **Länge eines Wortes** w über einem Alphabet ist die Anzahl seiner Zeichen
 |∣0∣|= 1|
 |∣ϵ∣|= 0|
 
-## 2.3 Die Menge der natürlichen Zahlen 
+## 2.3 Die Menge der natürlichen Zahlen  ℕ0
 
 Die Menge der natürlichen Zahlen wird wie folgt definiert verwendet: 
 ℕ:={1,2,3,…}
@@ -86,8 +88,16 @@ Zu beachten ist in dem Beispiel, dass {0,1} einmal das Alphabet und einmal die M
 
 # 3 Wortmenge
 
+## 3.1 ${\Sigma}^3$
 
-## 3.1 Menge aller Wörter Σ*, Σ+
+这里面的每个 element  都有三个字母组成
+
+![[Pasted image 20251101085045.png]]
+
+![[Pasted image 20251101084348.png]]
+
+![[Pasted image 20251101085131.png]]
+## 3.2 Menge aller Wörter Σ*, Σ+
 
 Die Menge aller Wörter über dem Alphabet Σ wird mit Σ* bezeichnet und wie folgt definiert:
 
@@ -112,6 +122,26 @@ Es gilt offensichtlich Σ*=Σ+∪{ϵ}.
 
 ![](image/Pasted%20image%2020251031132847.png)
 
+## 3.3 $⋃_{i=0}^{2} Σ^i$
+
+![[Pasted image 20251101085332.png]]
+
+![[Pasted image 20251101085119.png]]
+
+我们要找出在长度 ≤ 2 的所有单词中，哪些是回文的。
+
+| w   | wᴿ  | 相等吗？ |
+| --- | --- | ---- |
+| ε   | ε   | ✅    |
+| a   | a   | ✅    |
+| b   | b   | ✅    |
+| aa  | aa  | ✅    |
+| ab  | ba  | ❌    |
+| ba  | ab  | ❌    |
+| bb  | bb  | ✅    |
+
+结果为 
+L={ϵ,a,b,aa,bb}
 
 # 4 Wortordnung ⪯Σ
 
@@ -288,7 +318,7 @@ Das zentrale Problem im Zusammenhang mit formalen Sprachen ist die Entscheidung 
 
 与形式语言相关的核心问题是**判定问题（Entscheidbarkeit）**，即**判断一个单词是否属于某个语言**（也称为**单词问题 / Wortproblem**）。
 
-## 7.1 注意 **∅** 和 **{ϵ}** 的区别
+## 7.1 注意 **∅** 和 **{ϵ}** 的区别.  leere Sprache ∅
 
 - **∅** 是**空语言**，不包含任何单词；
 - **{ϵ}** 是一个语言，包含一个单词，即**空词（leeres Wort）**。

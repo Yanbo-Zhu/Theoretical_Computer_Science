@@ -345,6 +345,9 @@ Die Arbeitsweise und das Ergebnis einer Berechnung eines endlichen Automaten ist
 
 # 4 Berechnung eines endlichen Automaten: Sprache einer Automaten
 
+
+ Welche Bedingungen müssen erfüllt sein, damit ein deterministischer endlicher   Automat _E_ ein Wort _w_ akzeptiert?
+
 Sei E=(Q,Σ,δ,q0,F) ein endlicher Automat und sei w=x1x2…xn ein Wort, bei dem jedes xi∈Σ, 1≤i≤n. E **akzeptiert** dann w, falls eine Zustandsfolge r0,r1,…,rn in Q unter drei Bedingungen existiert:
 
 1. r0=q0,
@@ -353,6 +356,9 @@ Sei E=(Q,Σ,δ,q0,F) ein endlicher Automat und sei w=x1x2…xn ein Wort, bei dem
 
 Man sagt dann, dass E die Sprache L erkennt, falls L={w∣E akzeptiert w},  
 geschrieben L(E)=L.
+
+
+![[Pasted image 20251101090805.png]]
 
 
 设 E=(Q,Σ,δ,q0,F)E = (Q, \Sigma, \delta, q_0, F)E=(Q,Σ,δ,q0​,F) 是一个有限自动机，  

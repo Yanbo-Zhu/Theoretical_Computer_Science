@@ -34,12 +34,17 @@ Eb:  letzte Zeichen muss b sein
 Ea:  letzte Zeichen muss a sein
 
 
-----
+## 1.1 Wann erkennt ein NEA ein Wort einer Sprache?
+
+![[Pasted image 20251101091455.png]]
+
 
 # 2 **非确定性有限自动机（NEA, Nichtdeterministischer Endlicher Automat）**与**确定性有限自动机（DEA, Deterministischer Endlicher Automat）**在定义和行为上的区别。
 
 
-
+Was zeichnet einen nichtdeterministischen endlichen Automat gegenüber seiner deterministischen Variante aus? 
+Dieser Unterschied wird formal durch die modifizierte Überführungsfunktion ausgedrückt: δ : Q × Σε → P (Q)
+答案： Je Zustand und je gelesenem Zeichen kann kein bis mehrer Folgezustände zugelassen werden . Die möglichen Flogezuständer werden zu einer Teilmenge der Zustandsmenge zusammengefasst. 
 
 
 Neben der Einführung einer formalen Notation für nichtdeterministische endliche Automaten ist seine Arbeitsweise im Hinblick auf die Zustandsübergänge zu spezifizieren. Darüber hinaus ist die Beziehung zwischen deterministischen und nichtdeterministischen endlichen Automaten bzgl. der von ihnen erkennbaren Sprachen und Sprachfamilien zu analysieren.
@@ -267,6 +272,8 @@ Die Beispiele [Berechnung eines DEA mit konkreten Eingaben](https://vfhti.eduloo
 
 > Zwei endliche Automaten sollen als äquivalent bezeichnet werden, wenn die von ihnen erkannten Sprachen gleich sind.
 
+NEAs weisen gegenüber DEASs ein erweitertes Berechnungskonzept auf. Können sie damit auch komplexere Sprachstrukturen analysieren und erkennen? Falsch. Es gibt NEAs, zu denen es einem äquivalenten DEA gibt.
+
 Seien E1 und E2 deterministische oder nichtdeterministische endliche Automaten. E1 und E2 heißen äquivalent, wenn die von ihnen erkannten Sprachen gleich sind, also wenn L(E1)=L(E2) gilt.
 
 
@@ -400,7 +407,7 @@ Schritt II
 ![[Pasted image 20251031230119.png]]
 
 
-Schritt1 : kombination
+Schritt: kombination
 ![[Pasted image 20251031230136.png]]\
 
 
@@ -516,10 +523,10 @@ Ein unvollständiger endlicher Automat NI, der Identifikatoren akzeptiert, ist i
 
 - 一个标识符（变量名或符号名）由一个单词 www 构成，**以字母开头，后面跟零个或有限多个字母或数字**：
     
-    w∈{a,b,…,z}{a,b,…,z,0,1,…,9}∗w \in \{a,b,\dots,z\}\{a,b,\dots,z,0,1,\dots,9\}^*w∈{a,b,…,z}{a,b,…,z,0,1,…,9}∗
+    w∈{a,b,…,z}{a,b,…,z,0,1,…,9}∗
 - 为了简单起见，这里忽略大写字母。
     
-- 一个**不完整有限自动机** NININI 可以接受标识符（图示：Unvollständiger endlicher Automat NI）。
+- 一个**不完整有限自动机** NI可以接受标识符（图示：Unvollständiger endlicher Automat NI）。
     
 - 注意：NININI 同时也接受保留字作为标识符。
 
@@ -602,10 +609,45 @@ das eine Verfahren ist teilmengenkonstruktion und
 das zweite Verfahren ist die sogenannte reservation.
 
 
+
+
 ## 9.1 teilmengen-konstruktion
 
+### 9.1.1 原理 
 
-### 9.1.1 Beispiel 
+
+非确定性自动机（NEA）在每一步可能处于多个状态，而确定性自动机（DEA）每次只能处于一个状态。  
+**Teilmengekonstruktion（子集构造法）** 的核心思想是：
+
+> 用 DEA 的单个状态，来表示 NEA 在某一时刻**可能处于的所有状态的集合（Teilmenge）**。
+
+
+- NEA 可以“分裂”成多个路径同时运行；
+    
+- DEA 使用集合来“同时记录”这些所有可能的路径；
+    
+- 因此，DEA 在任何输入前缀后所处的状态，等价于 NEA 可能处于的所有状态的集合。
+
+
+
+---
+
+Vorgehensweise（步骤）
+
+
+![[Pasted image 20251101145228.png]]
+
+
+![[Pasted image 20251101145246.png]]
+
+
+![[Pasted image 20251101145301.png]]
+
+
+![[Pasted image 20251101145353.png]]
+
+
+### 9.1.2 Beispiel 
 
 ![](image/Pasted%20image%2020251031171356.png)
 
