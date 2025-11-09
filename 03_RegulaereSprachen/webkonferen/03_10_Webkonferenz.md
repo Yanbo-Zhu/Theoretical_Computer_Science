@@ -1,25 +1,14 @@
 
 
-# 1 Reguläre Sprachen und Operationen
-
-Formale Sprachen – selbst Mengen – lassen sich wieder zu Mengen zusammenfassen, so genannten _Sprachfamilien_ bzw. _Klassen_ von Sprachen. Die von endlichen Automaten erkennbaren Sprachen bilden somit eine Sprachfamilie, die Sprachfamilie der _regulären Sprachen_. Dieser Name bekommt über die durch _reguläre Ausdrücke_ definierten Sprachen seine Rechtfertigung. Zunächst aber wird die Sprachfamilie der regulären Sprachen mittels endlicher Automaten definiert und es werden weiterhin die _regulären Operationen_ eingeführt und diskutiert.
-
-
-# 2 
+# 1 Webkonferenz 07.11.2025: Regulaere Ausdrueck 
 
 
 ![[Pasted image 20251107160434.png]]
 
-
-regulären Ausdruck
-
-
-# 3 Regulaere Ausdrueck webkonderenz
-
 ![[Pasted image 20251107160712.png]]
 
 nur ` |, (). *, .(mal punkt)`  这四个 符号 被允许 
-## 3.1 Example 
+## 1.1 Example 
 
 1 
 a (a|b)*  =  

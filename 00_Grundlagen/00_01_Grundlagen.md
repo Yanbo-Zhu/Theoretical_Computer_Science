@@ -1,30 +1,30 @@
 
 # 1 Grundlagen der Mengenlehre
 
-1  Menge
+## 1.1 Menge
 
 Eine Menge ist eine Zusammenfassung bestimmter, wohlunterschiedener Objekte zu einem Ganzen. Die Objekte heißen Elemente der Menge. (Cantor’scher Mengenbegriff; insbesondere kann ein Element nur einmal in einer Menge vorkommen) Mengen kann man in beschreibender Form oder in aufz¨ahlender Form angeben.
 
 ![[Pasted image 20251029202504.png]]
 
-2  leere Menge
+## 1.2 leere Menge
 
 Die leere Menge ist eine Menge, die aus keinem Element besteht. Zeichen f¨ur die leere Menge: ∅.
 
 
-3 Anzahl
+## 1.3 Anzahl
 Die Anzahl der Elemente einer Menge M nennt man auch M¨achtigkeit |M |
 
 
-4 Teilmenge
+## 1.4 Teilmenge
 Eine Menge B heißt Teilmenge einer Menge A genau dann, wenn jedes Element von B auch Element der Menge A ist.
 Es gilt: die leere Menge ist Teilmenge jeder anderen Menge.
 
 
-5 Durchschnitt
+## 1.5 Durchschnitt
 Der Durchschnitt zweier Mengen A und B (Zeichen: A∩B) ist die Menge aller Elemente, die sowohl in A als auch in B enthalten sind.
 
-6 Vereinigung
+## 1.6 Vereinigung
 Die Vereinigung zweier Mengen A und B (Zeichen: A ∪ B) ist die Menge aller Elemente, die entweder in A oder (nicht ausschliessendes) in B enthalten sind
 
 
@@ -42,7 +42,7 @@ L1∖L2  L₁ \setminus L₂
 ![[Pasted image 20251101084527.png]]
 
 
-7 Potenzmenge
+## 1.7 Potenzmenge
 Eine Menge kann selber wieder aus Mengen bestehen.
 **Die Menge aller Teilmengen einer Grundmenge nennt man Potenzmenge.**
 所有子集（Teilmenge）组成的集合称为**幂集（Potenzmenge）**。
@@ -50,7 +50,10 @@ Eine Menge kann selber wieder aus Mengen bestehen.
 ![[Pasted image 20251029202725.png]]
 
 
-8
+![[Pasted image 20251109182658.png]]
+
+
+## 1.8 
 
 | 德语术语        | 中文意思 | 数学符号        | 说明      |
 | ----------- | ---- | ----------- | ------- |
