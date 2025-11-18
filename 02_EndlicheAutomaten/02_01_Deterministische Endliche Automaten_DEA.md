@@ -25,9 +25,17 @@ Die _endlichen Automaten_ stellen ein sehr einfaches Berechnungsmodell dar. In A
 
 简而言之，有限自动机是一种“用有限状态和有限内存去识别输入序列”的理论模型，是计算理论和编译技术中的重要基础。
 
-# 1 有限自动机
+# 1 #
 
-## 1.1 **Beispiel Ein-/Aus-Druckschalter** (无输出的有限自动机)
+Woerter: Abfolge von Zeichen
+Alphabet:  Menge von Zeichen
+
+
+
+
+# 2 有限自动机
+
+## 2.1 **Beispiel Ein-/Aus-Druckschalter** (无输出的有限自动机)
 
 Ein sehr einfaches Beispiel ist ein Ein-/Aus-Druckschalter zum Schalten irgendeines Gerätes. Das Gerät erinnert sich, ob es “aus” oder “an” ist. Ist es “aus” und der Schalter wird gedrückt, so wird das Gerät eingeschaltet, ist es “an” und der Schalter wird gedrückt, so wird das Gerät ausgeschaltet. Das Gerät merkt sich also seinen Zustand. Seine Eingaben bestehen aus dem Drücken des Schalters. Graphisch läßt sich ein solches Modell eines endlichen Automaten in einem so genannten Zustandsgraph darstellen (Abbildung [Endlicher Automat Zustandsgraph](https://vfhti.eduloop.de/loop/Deterministische_Endliche_Automaten#fig_EA-ZGraph0)).
 
@@ -50,7 +58,7 @@ Ein sehr einfaches Beispiel ist ein Ein-/Aus-Druckschalter zum Schalten irgendei
 
 
 
-## 1.2 Beispiel Volladdierer  有输出的有限自动机
+## 2.2 Beispiel Volladdierer  有输出的有限自动机
 
 
 Als Weiteres wird ein Beispiel aus dem Schaltungsentwurf vorgestellt. Dieses führt zu endlichen Automaten, die auch eine Ausgabe erzeugen. Gegenüber den endlichen Automaten ohne Ausgabe stellen diese einen allgemeineren Ansatz dar. Detailliert werden dann aber die Modelle und Verfahren aus der Sprachanalyse behandelt, die wie Beispiel [Ein-/Aus-Druckschalter](https://vfhti.eduloop.de/loop/Deterministische_Endliche_Automaten#bsp_EinAus) keine explizite Ausgabe erzeugen.
@@ -179,7 +187,7 @@ Die Berechnung des Volladdierers in Abhängigkeit von den Summandenziffern und s
 ![](image/TIO_2_2_VolladiererZustands.png)
 
 
-# 2 Mealy 自动机和 Moore 自动机。
+# 3 Mealy 自动机和 Moore 自动机。
 
 Die Abstrahierung dieses Beispiels zu einem Automatenmodell führt zu den _Mealy-Automaten_ und _Moore-Automaten_. Das sind endliche Automaten, die taktweise eine auf einem Eingabeband befindliche Eingabe verarbeiten und auf einem Ausgabeband eine Ausgabe erzeugen. Dabei durchlaufen sie eine von der Eingabe abhängige Zustandsfolge. Während bei einem Mealy-Automaten die Ausgabe von dem aktuellen Zustand und dem jeweiligen Eingabezeichen abhängt, hängt die Ausgabe beim Moore-Automaten ausschließlich vom aktuellen Zustand ab. Das Beispiel in Abbildung [Zustandsgraph Volladdierer](https://vfhti.eduloop.de/loop/Deterministische_Endliche_Automaten#fig_EA-ZGraph1) stellt einen Mealy-Automaten dar.
 
@@ -260,9 +268,9 @@ Formal wird ein endlicher Automat durch ein 5-Tupel beschrieben (Definition [Det
 
 
 
-# 3 **Deterministischer Endlicher Automat** 的定义 
+# 4 **Deterministischer Endlicher Automat** 的定义 
 
-## 3.1 5-Tupel
+## 4.1 5-Tupel
 
 Ein 5-Tupel E=(Q,Σ,δ,q0,F) heißt **deterministischer endlicher Automat** (DEA) oder kurz endlicher Automat, falls gilt:
 
@@ -281,7 +289,12 @@ Ein 5-Tupel E=(Q,Σ,δ,q0,F) heißt **deterministischer endlicher Automat** (DEA
 ---
 
 
-## 3.2 deterministische Variante eines endlichen Automaten
+## 4.2 deterministische Variante eines endlichen Automaten
+
+
+Hier wird zunächst die _deterministische_ Variante eines endlichen Automaten betrachtet. Das sind Automaten, für die zu einem Paar aus Eingabezeichen und Zustand genau ein Folgezustand definiert ist. In das Konzept des _Nichtdeterminismus_ wird später eingeführt.
+
+
 
 这里首先讨论**确定性有限自动机（deterministische Variante eines endlichen Automaten）**。  
 所谓确定性自动机，是指：  
@@ -294,7 +307,7 @@ Ein 5-Tupel E=(Q,Σ,δ,q0,F) heißt **deterministischer endlicher Automat** (DEA
 - In jede Zustand ist die richtung eindeutig, 不能通过 a 从 0 到 1, 或者从0 通过a 也到2 ，
 - Zustande ist eindeutig
 
-## 3.3 状态转移表（Überführungstabelle）
+## 4.3 状态转移表（Überführungstabelle）
 
 **状态转移函数 δ（Überführungsfunktion δ）**定义了自动机的“程序”——  
 它描述了在给定输入和状态下，自动机应如何变化。
@@ -319,7 +332,7 @@ Ein 5-Tupel E=(Q,Σ,δ,q0,F) heißt **deterministischer endlicher Automat** (DEA
 
 
 
-## 3.4 **状态图（Zustandsgraph）
+## 4.4 **状态图（Zustandsgraph）
 
 一个有限自动机可以通过一个**有向标记图（gerichteter Graph）**来描述，  
 这个图也称为**状态图（Zustandsgraph）**、**状态图示（Zustandsdiagramm）**或**转移图（Überführungsgraph）**。
@@ -332,7 +345,7 @@ Ein 5-Tupel E=(Q,Σ,δ,q0,F) heißt **deterministischer endlicher Automat** (DEA
 
 
 
-## 3.5 Beispiel: **Berechnung eines endlichen Automaten**
+## 4.5 Beispiel: **Berechnung eines endlichen Automaten**
 
 ![](image/Pasted%20image%2020251031153913.png)
 
@@ -343,7 +356,7 @@ Ein 5-Tupel E=(Q,Σ,δ,q0,F) heißt **deterministischer endlicher Automat** (DEA
 Die Arbeitsweise und das Ergebnis einer Berechnung eines endlichen Automaten ist informell bereits oben beschrieben worden. Einen formalen Ansatz dafür liefert Definition [Berechnung eines endlichen Automaten](https://vfhti.eduloop.de/loop/Deterministische_Endliche_Automaten#def_CompDFA).
 
 
-# 4 Berechnung eines endlichen Automaten: Sprache einer Automaten
+# 5 Berechnung eines endlichen Automaten: Sprache einer Automaten
 
 
  Welche Bedingungen müssen erfüllt sein, damit ein deterministischer endlicher   Automat _E_ ein Wort _w_ akzeptiert?
@@ -381,7 +394,7 @@ L={w∣E akzeptiert w},记作 L(E)=L.L = \{ w \mid E \text{ akzeptiert } w \}
 ![](image/Pasted%20image%2020251031154150.png)
 
 
-## 4.1 Berechnung eines DEA mit konkreten Eingaben
+## 5.1 Berechnung eines DEA mit konkreten Eingaben
 
 
 ![](image/Pasted%20image%2020251031154645.png)
@@ -394,30 +407,30 @@ L={w∣E akzeptiert w},记作 L(E)=L.L = \{ w \mid E \text{ akzeptiert } w \}
 
 Gern — ich fasse das Ganze knapp, klar und strukturiert zusammen und gebe die Idee des Beweises per Induktion dazu.
 
-### 4.1.1 Was ist gegeben?
+### 5.1.1 Was ist gegeben?
 
 Ein deterministischer endlicher Automat EEE (mit Zuständen {0,1,2}\{0,1,2\}{0,1,2}, Startzustand 000 und Endzustand(en) F={0}F=\{0\}F={0}).  
 Eingabealphabet Σ={a,b}\Sigma=\{a,b\}Σ={a,b}.
 
 ![[Pasted image 20251031220434.png]]
 
-### 4.1.2 Ablauf der Berechnung (Lesekopf / Takt-Notation)
+### 5.1.2 Ablauf der Berechnung (Lesekopf / Takt-Notation)
 
 ![[Pasted image 20251031220503.png]]
 
 
 
-### 4.1.3 Erkannte Sprache  L(E)
+### 5.1.3 Erkannte Sprache  L(E)
 
 ![[Pasted image 20251031220552.png]]
 
 
-### 4.1.4 Wie beweist man das formal
+### 5.1.4 Wie beweist man das formal
 
 ![[Pasted image 20251031220609.png]]
 
 
-## 4.2 Alphabet eines DEAs
+## 5.2 Alphabet eines DEAs
 
 
 Wie in Abschnitt [Zusammenhang mit Programmiersprachenmerwähnt](https://vfhti.eduloop.de/loop/Zusammenhang_mit_Programmiersprachen "Zusammenhang mit Programmiersprachen") lassen sich die elementaren Einheiten eines Programms durch das Modell eines endlichen Automaten analysieren und erkennen. Das folgende Beispiel zeigt den Ansatz für den Aufbau eines lexikalischen Analysators (Scanners). Das Beispiel wird dann im nächsten Abschnitt fortgeführt.
@@ -447,12 +460,12 @@ ziffer∈{0,1,2,…,9} xf∈Σ∖{f} xo∈Σ∖{o} xr∈Σ∖{r}
 
 
 
-# 5 2025-10-24 在线课程
+# 6 2025-10-24 在线课程
 
 
 
 
-## 5.1 我们想要建立一个Tomaten zu der Sprache
+## 6.1 我们想要建立一个Tomaten zu der Sprache
 
 Aphabet {0, 1}
 
@@ -474,7 +487,7 @@ ist eine beliebig gewählte Sprache
 
 
 
-## 5.2 Definieren wir ein Automaten
+## 6.2 Definieren wir ein Automaten
 
 
 Einen greade Anzahle von null und eine gerade Anzahl von eins
@@ -501,7 +514,7 @@ Q0 是开始的点
 ![[Pasted image 20251031221205.png]]
 
 
-## 5.3 鉴别 problematische Automaten
+## 6.3 鉴别 problematische Automaten
 
 
 eine Automate  ist falsch. wenn entweder dann wenn er ein Wort seiner Sprache nicht erkennen

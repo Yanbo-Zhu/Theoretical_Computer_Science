@@ -24,3 +24,9 @@ Ja, denn die regulären Sprachen sind unter der Operation ==Vereinigung== abgesc
 4
 
 ![[Pasted image 20251109195406.png]]
+
+
+
+# 
+
+

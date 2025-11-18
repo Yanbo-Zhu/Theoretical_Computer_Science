@@ -9,10 +9,20 @@ L2 = {$\epsilon$, 1, 11, 111, . . .}
 
 
 (a) $L_1 \bigcup L_2$ = {$\epsilon$, 0, 00, . . . , 1, 11, . . .} = $\{w | w = 0^i ,  w = 1^i \ mit \ i \in N_0\}$
-(b) L1 $\bigcap$ L2 = {$\epsilon$}
+(b) L1 $\bigcap$ L2 = {$\epsilon$}   (Leer Worter , Epision )
 (c) L1 \ L2 = {0, 00, 000, . . .} = $\{0^i | i \in N\}$
+
 (d) $L1 \bigcap \Sigma^*$  = L1
+$\Sigma^*$  = potenzmenge  = Menge von alle Wort 
+In der formalen Sprachtheorie bezeichnet **Σ∗\Sigma^*Σ∗** die **Menge aller möglichen Zeichenketten (Strings)**,   die aus dem **Alphabet Σ\SigmaΣ** gebildet werden können – **einschließlich der leeren Zeichenkette ε\varepsilonε**.
+
+$\Sigma^1$: alle Worter mit Lange 2 uber $\Sigma$
+
+
 (e) (L1 $\bigcup$ L2) & $\Sigma^3$ = {000, 111}
+
+
+
 
 # 2 
 
