@@ -99,6 +99,10 @@ Zu beachten ist in dem Beispiel, dass {0,1} einmal das Alphabet und einmal die M
 ![[Pasted image 20251101085131.png]]
 ## 3.2 Menge aller Wörter Σ*, Σ+
 
+![[Pasted image 20251124210613.png]]
+
+**Σ*** bezeichnet die **Menge aller Wörter (endlichen Zeichenketten)** über dem Alphabet Σ — einschließlich des leeren Wortes ε. → **a ist richtig**
+
 Die Menge aller Wörter über dem Alphabet Σ wird mit Σ* bezeichnet und wie folgt definiert:
 
 Σ*:=Σ0∪Σ1∪Σ2∪…
