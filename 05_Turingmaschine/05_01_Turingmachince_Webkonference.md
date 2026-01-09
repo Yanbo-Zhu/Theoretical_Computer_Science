@@ -53,7 +53,7 @@ diese Ziffer = letzte Ziffer.
 ![](image/Pasted%20image%2020251205161956.png)
 
 `0 -> _, R`
-wenn wir 0 haben unter schreibekopf, dann ersetzt 0 durch black, dann schreibkopf nach rechte verscheiben 
+wenn wir 0 haben unter schreibekopf, dann ersetzt 0 durch blank, dann schreibkopf nach rechte verscheiben 
 
 
 
@@ -121,5 +121,62 @@ T_ink. : Turingmachine mit incrtement Function
 
 ![](image/Pasted%20image%2020251205164829.png)
 
+# 6 #
+
+![](image/Pasted%20image%2020251219161655.png)
+
+1 meschen des gelesene zwichens, uberschreiben mit Blank
+2 zu Woert mitte p
+3 zur 1. Zeichen des nicht worterlich analysiert sind 
+4 zeichen mit  dem Zeichen in D 
+ungleichen =>  verwerfen 
+gleichen =>   aktuellen Zeichen als okay vergleichen markiert 
+5 zugluchen zum Wortanfangen
+6 noch zeichen？ =》 weiter mit schrit 1
+7 wenn keine weiter zeichen gibt,  =? aktzeptieren, Ende =? verwerden Ende 
 
 
+---
+
+![](image/Pasted%20image%2020251219162609.png)
+
+![](image/Pasted%20image%2020251219162834.png)
+
+![](image/Pasted%20image%2020251219163554.png)
+
+
+a-> blank, R
+wenn a gelesen, macht blank (deswegen  a geloscht ), dann lesekopf  nach rechte rucken 
+
+
+---
+
+Uberfurhungsfunction 
+grafische Darstellung 
+
+
+column:  aktuelle zustande,   zeichen wird gelesen   , folgende zustande,  zeichen verwendet  ( um  orginal zeichen umzuschriebn )  ,  bewegen das lesekopf nach xx 
+
+红线左：  was ich habe。 红线右边： was ich wechselcen 
+
+
+![](image/Pasted%20image%2020251219163617.png)
+
+
+![](image/Pasted%20image%2020251219164142.png)
+
+
+---
+
+到达 Zustand 3
+
+Wortmitte und vergleichen Zeichen  lesen 
+
+![](image/Pasted%20image%2020251219164312.png)
+
+
+---
+
+ okay, vergleichen 
+
+![](image/Pasted%20image%2020251219164418.png)
